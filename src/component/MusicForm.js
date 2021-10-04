@@ -4,7 +4,7 @@ import MusicFormRender from "./MusicFormRender.js"
 class Music extends Component {
     render() {
         return (
-                <MusicFormRender createMusicFun={this.props.createMusicFun} />
+                <MusicFormRender createMusicFun={this.props.createMusicFun} songResult={this.props.songResult}/>
         )
     }
 }

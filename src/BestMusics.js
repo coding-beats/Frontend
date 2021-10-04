@@ -116,10 +116,8 @@ class MyFavoriteMusic extends React.Component {
           <Card.Body>
             <Card.Title>My Fav Songs</Card.Title>
             <Card.Text>
-              <br />
               {/* add music functions */}
               <MusicForm createMusicFun={this.createMusic} />
-              <br />
               {/* get and delete functions */}
               {this.state.musicData.map((element, index) => {
                 return (
@@ -134,7 +132,6 @@ class MyFavoriteMusic extends React.Component {
                   musicInfo={this.state.musicInfoUpdate}
                   updateMusic={this.updateMusic}
                 />}
-              <br />
             </Card.Text>
           </Card.Body>
         </Card>

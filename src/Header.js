@@ -47,14 +47,12 @@ function Header() {
               </div>
               <ul className={click ? "nav-menu active" : "nav-menu"}>
                 <li className="nav-item">
-                  <Link className="nav-links">
-                    <LoginButton id="login" onClick={closeMobileMenu}/>
-                  </Link>
-                </li>
-                <li className="nav-item">
                   <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                     Home
                   </Link>
+                </li>
+                <li className="nav-links">
+                    <LoginButton onClick={closeMobileMenu}/>
                 </li>
               </ul>
             </div>
@@ -74,17 +72,12 @@ function Header() {
               </div>
               <ul className={click ? "nav-menu active" : "nav-menu"}>
                 <li className="nav-item">
-                  <Link className="nav-links" >
-                    <LogoutButton id="logout" onClick={closeMobileMenu}/>
-                  </Link>
-                </li>
-                <li className="nav-item">
                   <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                     Home
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/Music" className="nav-links" onClick={closeMobileMenu}>
+                  <Link to="/MusicList" className="nav-links" onClick={closeMobileMenu}>
                     Music
                   </Link>
                 </li>
@@ -105,6 +98,9 @@ function Header() {
                   >
                     AboutUs
                   </Link>
+                </li>
+                <li className="nav-item">
+                    <LogoutButton onClick={closeMobileMenu}/>
                 </li>
               </ul>
             </div>

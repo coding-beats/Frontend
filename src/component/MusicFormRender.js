@@ -7,13 +7,11 @@ class AddMusicForm extends Component {
         return (
             <>
                 <br />
-                <Form onSubmit={this.props.createMusicFun}>
+                <Form onSubmit={(e)=>{this.props.createMusicFun(e, this.props.songResult)}}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Control type="text" name='title' placeholder="Enter Music Title" />
-                        <Form.Control type="text" name='artist' placeholder="Enter Auther Name" />
                         <Form.Control type="text" name='note' placeholder="Enter Music note" />
-                        <Form.Control type="text" name='status' placeholder="Enter Your Status" />
                     </Form.Group>
+                    <br />
                     <Button variant="primary" type="submit">
                         ADD To Fav List! ❤
                     </Button>

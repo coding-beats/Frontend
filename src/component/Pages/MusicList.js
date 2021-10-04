@@ -4,16 +4,21 @@ import axios from "axios";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import SongExplorer from '../SongExplorer'
+import MusicForm from '../MusicForm.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { withAuth0 } from '@auth0/auth0-react';
 
 class Music extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
+      musicData: [],
       songResult: {},
       searchQuery: '',
       showSongInfo: false,
-      showError: false
+      showError: false,
+      showUpdateForm: false,
     }
   }
 
@@ -27,12 +32,12 @@ class Music extends React.Component {
       let reqUrl = `http://localhost:3001/getMusicList?song=${this.state.searchQuery}`;
 
       let sResult = await axios.get(reqUrl);
-      console.log(sResult.data);
       this.setState({
         songResult: sResult.data,
         showSongInfo: true
       })
     }
+    
     catch {
       this.setState({
         showError: true,
@@ -40,7 +45,27 @@ class Music extends React.Component {
       })
     }
   }
- 
+  // add music function
+  createMusic = async (e, songResult) => {
+    e.preventDefault()
+      
+    let musicFormInfo = await {
+      title1: songResult[0].title,
+      artist1: songResult[0].artist,
+      note1: e.target.note.value,
+      songUrl1: songResult[0].songURL,
+      email1: this.props.auth0.user.email
+    }
+    console.log("musicFormInfo",musicFormInfo);
+
+    let createData = await axios.post(`${process.env.REACT_APP_SERVER}/createMusic`, musicFormInfo);
+
+    this.setState({
+      musicData: createData.data
+    })
+
+  }
+
   render() {
     return (
       <div>
@@ -58,15 +83,20 @@ class Music extends React.Component {
 
         {this.state.showSongInfo &&
           <div>
-            <Card style={{ width: '30rem' }}>
+            <Card style={{ width: '40%' }}>
               <Card.Body>
                 <Card.Title>song info</Card.Title>
                 <Card.Text>
-                {this.state.songResult.map(info => {
+                  <br />
+                  {this.state.songResult.map(info => {
                     return (
                       <SongExplorer songResult={info} />
                     )
                   })}
+                  <br />
+                  {/* add music functions */}
+                  <MusicForm songResult={this.state.songResult} createMusicFun={this.createMusic} />
+                  <br />
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -85,4 +115,4 @@ class Music extends React.Component {
   }
 }
 
-export default Music;
+export default withAuth0(Music);

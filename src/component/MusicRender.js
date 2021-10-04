@@ -1,20 +1,20 @@
-
 import React, { Component } from "react";
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './MusicRender.css'
 
 class MusicRender extends Component {
 
     deleteMusicHandler = () => {
-        this.props.deleteMusicFun(this.props.id)
+        this.props.deleteMusciFun(this.props.id)
     }
     updateMusicHandler = () => {
         this.props.showUpdateMusicForm(this.props.musicData)
     }
 
-    render() {
-        return (
+    render() {  
+    return (
             <div key={this.props.idx}>
                 <Card style={{ width: '100%' }}>
                     <Card.Body>
@@ -22,13 +22,21 @@ class MusicRender extends Component {
                         <Card.Text>Title: {this.props.musicData.title}</Card.Text>
                         <Card.Text>Artisit: {this.props.musicData.artist}</Card.Text>
                         <Card.Text>Note: {this.props.musicData.note}</Card.Text>
-                        <Card.Text>SongUrl: {this.props.musicData.songUrl}</Card.Text>
-                        <Button onClick={this.deleteMusicHandler}>
+                        <Card.Text class="buttons">
+                        <Button variant="primary" type="submit" href={this.props.musicData.songUrl}>
+                                Click To Listen ♬
+                        </Button>
+                        </Card.Text>
+                        <Card.Text class="buttons">
+                        <Button onClick={this.deleteMusicHandler} >
                             Remove the song! ❌
                         </Button>
-                        <Button onClick={this.updateMusicHandler}>
+                        </Card.Text>
+                        <Card.Text class="buttons">
+                        <Button onClick={this.updateMusicHandler} >
                             Update Your Note! ✍️
                         </Button>
+                        </Card.Text>
                     </Card.Body>
                 </Card>
             </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Home from './component/Pages/Home';
-import Music from './component/Pages/Music';
+import Music from './component/Pages/MusicList';
 import AboutUs from './component/Pages/AboutUs';
 import FavoirteList from './component/Pages/FavoirteList';
 import Footer from './Footer';
@@ -17,11 +17,8 @@ class App extends React.Component {
         <Router>
             <Header />
             <Switch>
-              <Route exact path="/">
-              {this.props.auth0.isAuthenticated ? <Music /> : <Home /> }
-              </Route>
-               <Route path='/' exact component={Home} />
-              <Route path='/Music' component={Music}/>
+              <Route path='/' exact component={Home} />
+              <Route path='/MusicList' component={Music}/>
               <Route path='/FavoirteList' component={FavoirteList}/>
               <Route path='/AboutUs' component={AboutUs}/>
             </Switch>

@@ -2,7 +2,6 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 import './Home.css';
-// import LoginButton from './component/LoginButton';
 
 class Login extends React.Component {
   render() {
@@ -15,7 +14,6 @@ class Login extends React.Component {
           <Card.Text>
             Click Below to HomePage
           </Card.Text>
-          {/* <LoginButton /> */}
         </Card.Body>
         <Card.Text>
           Click Below to HomePage
@@ -27,7 +25,6 @@ class Login extends React.Component {
             <Card.Text>
               Click Below to HomePage
             </Card.Text>
-            {/* <LoginButton /> */}
           </Card.Body>
           <Card.Text>
             Click Below to HomePage
@@ -39,7 +36,6 @@ class Login extends React.Component {
             <Card.Text>
               Click Below to HomePage
             </Card.Text>
-            {/* <LoginButton /> */}
           </Card.Body>
           <Card.Text>
             Click Below to HomePage
@@ -51,7 +47,6 @@ class Login extends React.Component {
             <Card.Text>
               Click Below to HomePage
             </Card.Text>
-            {/* <LoginButton /> */}
           </Card.Body>
           <Card.Text>
             Click Below to HomePage
