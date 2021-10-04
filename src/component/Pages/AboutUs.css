@@ -29,12 +29,13 @@ body {
   width: 80%;
 }
 .card {
-  margin: 10px;
+  margin: 30px 30px;
   display: inline-block;
   position: relative;
-  width: 220px;
-  height: 260px;
+  width: 300px;
+  height: 350px;
   opacity: 0.85;
+  
 }
 .front, .back {
   width: 100%;

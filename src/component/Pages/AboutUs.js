@@ -1,5 +1,6 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { Card } from "react-bootstrap";
 import "./AboutUs.css";
 import Yasmeen from "../../Images/Yasmeen.png";
 import Haneen from "../../Images/Haneen.png";
@@ -8,8 +9,6 @@ import Ahmad from "../../Images/Ahmad.png";
 import Morad from "../../Images/Morad.png";
 import Ziyad from "../../Images/Ziyad.jpg";
 
-
-import { style, width } from "dom-helpers";
 class AboutUs extends React.Component {
   render() {
     return (
@@ -138,7 +137,7 @@ class AboutUs extends React.Component {
                 backgroundRepeat: "no-repeat",
               }} />
 
-            <span className="name">Ziyad Saleh</span>
+            <span className="name">Ziyad Haitham Saleh</span>
             <hr />
             <span className="job"> Web developer </span>
           </div>
@@ -170,7 +169,7 @@ class AboutUs extends React.Component {
                 backgroundRepeat: "no-repeat",
               }} />
 
-            <span className="name">Ahmad Abu.Laban</span>
+            <span className="name">Ahmad Abu-Laban</span>
             <hr />
             <span className="job"> Web developer </span>
           </div>
@@ -202,7 +201,7 @@ class AboutUs extends React.Component {
                 backgroundRepeat: "no-repeat",
               }} />
 
-            <span className="name">Morad AbuArqoub</span>
+            <span className="name">Morad Abu-Arqoub</span>
             <hr />
             <span className="job"> Web developer </span>
           </div>
