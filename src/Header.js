@@ -3,7 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "./Button";
 import { Link } from "react-router-dom";
 import "./Header.css";
-import { withAuth0 } from "@auth0/auth0-react";
+import LoginButton from './component/LoginButton';
+import LogoutButton from './component/LogoutButton';
+import { useAuth0 } from "@auth0/auth0-react";
 
 function Header() {
   const [click, setClick] = useState(false);
@@ -25,62 +27,93 @@ function Header() {
   }, []);
 
   window.addEventListener("resize", showButton);
+  const { user, isAuthenticated, isLoading } = useAuth0();
+
+  console.log(isAuthenticated)
 
   return (
+
     <>
-      <nav className="navbar">
-        <div className="navbar-container">
-          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            Music&beats
-            <i class="fab fa-typo3" />
-          </Link>
-          <div className="menu-icon" onClick={handleClick}>
-            <i className={click ? "fas fa-times" : "fas fa-bars"} />
-          </div>
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                Home
+      {!isAuthenticated &&
+        <>
+          <nav className="navbar">
+            <div className="navbar-container">
+              <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+                Music&beats
+                <i class="fab fa-typo3" />
               </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/Music" className="nav-links" onClick={closeMobileMenu}>
-                Music
+              <div className="menu-icon" onClick={handleClick}>
+                <i className={click ? "fas fa-times" : "fas fa-bars"} />
+              </div>
+              <ul className={click ? "nav-menu active" : "nav-menu"}>
+                <li className="nav-item">
+                  <Link className="nav-links">
+                    <LoginButton id="login" onClick={closeMobileMenu}/>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                    Home
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </>
+      }
+      {isAuthenticated &&
+        <>
+          <nav className="navbar">
+            <div className="navbar-container">
+              <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+                Music&beats
+                <i class="fab fa-typo3" />
               </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/FavoirteList"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Favoirte List
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/AboutUs"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                AboutUs
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/sign-up"
-                className="nav-links-mobile"
-                onClick={closeMobileMenu}
-              >
-                Sign Up
-              </Link>
-            </li>
-          </ul>
-          {button && <Button buttonStyle="btn--outline">login</Button>}
-        </div>
-      </nav>
+              <div className="menu-icon" onClick={handleClick}>
+                <i className={click ? "fas fa-times" : "fas fa-bars"} />
+              </div>
+              <ul className={click ? "nav-menu active" : "nav-menu"}>
+                <li className="nav-item">
+                  <Link className="nav-links" >
+                    <LogoutButton id="logout" onClick={closeMobileMenu}/>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                    Home
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/Music" className="nav-links" onClick={closeMobileMenu}>
+                    Music
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    to="/FavoirteList"
+                    className="nav-links"
+                    onClick={closeMobileMenu}
+                  >
+                    Favoirte List
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    to="/AboutUs"
+                    className="nav-links"
+                    onClick={closeMobileMenu}
+                  >
+                    AboutUs
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </>
+      }
+      {button && <Button buttonStyle="btn--outline">login</Button>}
     </>
   );
 }
 
-export default withAuth0(Header);
+export default Header;
