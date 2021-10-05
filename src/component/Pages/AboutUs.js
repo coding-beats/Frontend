@@ -14,16 +14,10 @@ class AboutUs extends React.Component {
     return (
       
 
- <><img style ={{backgroundSize:"cover", width:"100%"}}src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG11c2ljfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" />
- <a href="#" style ={{	position: "absolute",
-	bottom: "20px",
-	left: "50%",
-	zIndex: "2",
-	transform: "translate(0, -50%)",
-	textDecoration: "none"}} >
-<button class= "button1 bouncy" style={{backgroundColor:"#62c6d8", position: "relative", top:"80px", right: "90px", fontSize:"bolder"}} type="button" class="btn btn-default">
+ <><img style ={{backgroundSize:"cover", width:"100%"}}src="https://cutewallpaper.org/21/4k-music-wallpaper/Music-Headphones-Hd-Wallpaper-for-Desktop-and-Mobiles-4K-.jpg" />
 
-<span></span>Meet us down</button></a> 
+ 
+ <a style={{scrollBehavior: "smooth", position:"relative", bottom:"909px", left: "620px"}} href="#container"><button class ="bubbly-button" type="button">Meet us down</button></a>
 
 
  <br></br>
@@ -143,7 +137,7 @@ class AboutUs extends React.Component {
           </div>
           <div className="back">
             <span>Skills:</span>
-            <p>Web developer and Software engineer</p>
+            <p> Web developer and Software engineer</p>
             <span>Social media </span>
             <div className="icons">
               <a href="https://github.com/Ziyadhs">
