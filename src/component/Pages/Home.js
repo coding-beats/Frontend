@@ -1,11 +1,20 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Button from "react-bootstrap/Button";
 import "./Home.css";
 import CardItem from "../CardItem";
-// import Carousel from "react-bootstrap/Carousel";
-import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
+// import { Carousel } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "react-slideshow-image/dist/styles.css";
+import { Slide } from "react-slideshow-image";
+
+const slideImages = [
+  "images/Hip-Hop1.png",
+  "images/Adham_1.jpg",
+  "images/Rihanna.gif",
+  "images/Adham.jfif",
+  "images/EDM.png",
+];
 
 class Login extends React.Component {
   render() {
@@ -18,7 +27,7 @@ class Login extends React.Component {
           <div className="hero-btns">
             <Button
               className="btns"
-              path="/Music"
+              href="/Music"
               buttonStyle="btn--outline"
               buttonSize="btn--large"
             >
@@ -26,7 +35,7 @@ class Login extends React.Component {
             </Button>
           </div>
         </div>
-
+        {/*  */}
         <div className="cards">
           <h1>Kinds of songs we offer!</h1>
           <div className="cards__container">
@@ -86,15 +95,14 @@ class Login extends React.Component {
             </div>
           </div>
         </div>
-        
-
+        {/*  */}
         <div className="hero-container1">
           <img src="/videos/1.jpg" />
         </div>
-
-        <div className="cards">
-          <h1>most listened!</h1>
-          <div className="cards__container1">
+        {/*  */}
+        <div className="cards1">
+          {/* <h1>most listened!</h1> */}
+          {/* <div className="cards__container1">
             <div className="cards__wrapper">
               <ul className="cards__items">
                 <CardItem
@@ -114,34 +122,122 @@ class Login extends React.Component {
                 />
               </ul>
             </div>
-            
+          </div> */}
+          {/* <Carousel variant="dark">
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="/videos/1.jpg"
+                alt="First slide"
+              />
+              <Carousel.Caption>
+                <h5>First slide label</h5>
+                <p>
+                  Nulla vitae elit libero, a pharetra augue mollis interdum.
+                </p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="/videos/1.jpg"
+                alt="Second slide"
+              />
+              <Carousel.Caption>
+                <h5>Second slide label</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="/videos/1.jpg"
+                alt="Third slide"
+              />
+              <Carousel.Caption>
+                <h5>Third slide label</h5>
+                <p>
+                  Praesent commodo cursus magna, vel scelerisque nisl
+                  consectetur.
+                </p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          </Carousel> */}
+          <div>
+            <h1 className="divh">most listened!</h1>
+            <Slide easing="ease">
+              <div className="each-slide">
+                <div
+                  style={{ backgroundImage: `url(${slideImages[0]})` }}
+                ></div>
+              </div>
+              <div className="each-slide">
+                <div
+                  style={{ backgroundImage: `url(${slideImages[1]})` }}
+                ></div>
+              </div>
+              <div className="each-slide">
+                <div
+                  style={{ backgroundImage: `url(${slideImages[2]})` }}
+                ></div>
+              </div>
+              <div className="each-slide">
+                <div
+                  style={{ backgroundImage: `url(${slideImages[3]})` }}
+                ></div>
+              </div>
+              <div className="each-slide">
+                <div
+                  style={{ backgroundImage: `url(${slideImages[4]})` }}
+                ></div>
+              </div>
+            </Slide>
           </div>
         </div>
+
+        {/*  */}
 
         <div className="hero-container1">
           <img src="/videos/1.jpg" />
         </div>
 
-        <div className="cards">
+        {/*  */}
+
+        {/* <div className="cards">
           <h1>most listened!</h1>
           <div className="cards__container">
             <div className="cards__wrapper">
               <ul className="cards__items">
-                <Card style={{ width: "25rem" , height: "25rem", transition: "" }}>
+                <Card
+                  style={{ width: "25rem", height: "25rem", transition: "" }}
+                >
                   <Card.Body>
                     <Card.Text>
                       Some quick example text to build on the card title and
-                      make up the bulk of the card's content. Some quick example text to build on the card title and
-                      make up the bulk of the card's content.Some quick example text to build on the card title and
-                      make up the bulk of the card's content.Some quick example text to build on the card title and
-                      make up the bulk of the card's content.Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
+                      make up the bulk of the card's content. Some quick example
+                      text to build on the card title and make up the bulk of
+                      the card's content.Some quick example text to build on the
+                      card title and make up the bulk of the card's content.Some
+                      quick example text to build on the card title and make up
+                      the bulk of the card's content.Some quick example text to
+                      build on the card title and make up the bulk of the card's
+                      content.
                     </Card.Text>
                   </Card.Body>
                 </Card>
               </ul>
             </div>
           </div>
+        </div> */}
+
+        <div className="cards">
+          <div className="Finaldiv">
+            <p>
+              <h2>Our Vision:</h2> 
+              This application helps people to listen to their favorite songs and see the most listened to songs in an easy and fast way. The application provides them with many advantages, including listening to songs, adding comments, adding songs to favorites, and deleting songs from them.
+            </p>
+                <div style={{ backgroundImage: `url(https://images-ext-1.discordapp.net/external/rsAinBEvXxiQdBAi9s3NduWjbkVxe2Gaf9X_5yibRTQ/https/wallpaperaccess.com/full/3634688.jpg?width=1050&height=670)` }}></div>
+              </div>
         </div>
       </>
     );
