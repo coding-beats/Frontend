@@ -58,7 +58,7 @@ class Music extends React.Component {
   getSongListFun = async () => {
     try {
 
-      let reqUrl = `http://localhost:3001/getMusicList?key=484129036`;
+      let reqUrl = `http://localhost:3001/getMusicList?songID=40008598`;
 
       let sResult = await axios.get(reqUrl);
       // console.log("sResult",sResult.data);
@@ -104,7 +104,7 @@ class Music extends React.Component {
       <div style={{ textAlign:"center" }}>
         <Form onSubmit={this.getSongFun}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Control style={{ width:"300px", marginLeft:"40.5%", marginBottom:"25px" }} type="text" name='song' placeholder="Enter Song Name" />
+            <Form.Control style={{ width:"300px", marginLeft:"40.5%", marginBottom:"25px", marginTop:"25px"}} type="text" name='song' placeholder="Enter Song Name" />
           </Form.Group>
           <Button variant="primary" type="submit">
             Search! 🔍

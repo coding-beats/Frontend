@@ -19,7 +19,7 @@ class SongListRender extends Component {
                                 Click To Listen ♬
                             </Button>
                             {/* songResult={this.state.songResult}  */}
-                            <MusicForm songResult={this.props.songListResult} createMusicFun={this.props.createMusicFun} />
+                            <MusicForm songListResult={this.props.songListResult} createMusicFun={this.props.createMusicFun} />
                         </Card.Text>
                     </Card.Body>
                 </Card>
