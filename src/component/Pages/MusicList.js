@@ -58,7 +58,7 @@ class Music extends React.Component {
   getSongListFun = async () => {
     try {
 
-      let reqUrl = `http://localhost:3001/getMusicList?id=40008598`;
+      let reqUrl = `http://localhost:3001/getMusicList?key=484129036`;
 
       let sResult = await axios.get(reqUrl);
       // console.log("sResult",sResult.data);
@@ -67,7 +67,7 @@ class Music extends React.Component {
         showTop20: true
       })
       // console.log(this.state.showTop20);
-      console.log("songListResult", this.state.songListResult);
+      // console.log("songListResult", this.state.songListResult);
     }
 
     catch {
@@ -81,7 +81,7 @@ class Music extends React.Component {
   // add music function
   createMusic = async (e, songResult) => {
     e.preventDefault()
-    console.log(songResult);
+    // console.log(songResult);
     let musicFormInfo = await {
       img1: songResult.img? songResult.img : songResult[0].img,
       title1: songResult.title? songResult.title : songResult[0].title,
@@ -101,17 +101,17 @@ class Music extends React.Component {
   }
   render() {
     return (
-      <div style={{textAlign:"center"}}>
+      <div style={{ textAlign:"center" }}>
         <Form onSubmit={this.getSongFun}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Control type="text" name='song' placeholder="Enter Song Name" />
+            <Form.Control style={{ width:"300px", marginLeft:"40.5%", marginBottom:"25px" }} type="text" name='song' placeholder="Enter Song Name" />
           </Form.Group>
           <Button variant="primary" type="submit">
             Search! 🔍
           </Button>
         </Form>
         {this.state.showSongInfo &&
-          <div >
+          <div>
             <Card style={{ maxWidth: "20rem", maxHeight: "38rem", margin: "2rem"}}>
               <Card.Body>
                 <Card.Text>

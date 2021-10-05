@@ -2,8 +2,7 @@
 import React from "react";
 import "./Home.css";
 import CardItem from "../CardItem";
-import { Card, Button } from "react-bootstrap";
-// import { Carousel } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import { Slide } from "react-slideshow-image";
@@ -16,18 +15,18 @@ const slideImages = [
   "images/EDM.png",
 ];
 
-class Login extends React.Component {
+class Home extends React.Component {
   render() {
     return (
       <>
         <div className="hero-container">
-          <img src="/videos/1.jpg" />
-          <h1>Music&beats</h1>
+          <img class="img1" src="/videos/1.jpg" />
+          <h1 class="h1Home">Music&beats</h1>
           <p>What are you waiting for?</p>
           <div className="hero-btns">
             <Button
               className="btns"
-              href="/Music"
+              href="/MusicList"
               buttonStyle="btn--outline"
               buttonSize="btn--large"
             >
@@ -37,7 +36,7 @@ class Login extends React.Component {
         </div>
         {/*  */}
         <div className="cards">
-          <h1>Kinds of songs we offer!</h1>
+          <h1 class="h1Home">Kinds of songs we offer!</h1>
           <div className="cards__container">
             <div className="cards__wrapper">
               <ul className="cards__items">
@@ -45,25 +44,25 @@ class Login extends React.Component {
                   src="images/Pop.jpg"
                   text="Pop is one of the most popular music genres within the younger generations, but it’s still often loved among older generations too."
                   label="Pop"
-                  path="/Music"
+                  path="/MusicList"
                 />
                 <CardItem
                   src="images/Classical.png"
                   text="Classical music is one of the oldest types of music in existence, dating back to as early as the 5th century."
                   label="Classical"
-                  path="/Music"
+                  path="/MusicList"
                 />
                 <CardItem
                   src="images/Hip-Hop.png"
                   text="Hip-hop or rap music has distinctive rhythmic beats that are more defined on the bass line."
                   label="Hip-Hop and Rap"
-                  path="/Music"
+                  path="/MusicList"
                 />
                 <CardItem
                   src="images/EDM.png"
                   text="Is a broad range of percussive electronic music genres made festivals."
                   label="EDM"
-                  path="/Music"
+                  path="/MusicList"
                 />
               </ul>
               <ul className="cards__items">
@@ -71,25 +70,25 @@ class Login extends React.Component {
                   src="images/Country.png"
                   text="It combines the cowboy music of the west with the folk music of the southeast."
                   label="Country"
-                  path="/Music"
+                  path="/MusicList"
                 />
                 <CardItem
                   src="images/Metal.png"
                   text="metal music is characterized by heavy sounds and the domination of electric and bass guitars."
                   label="Metal"
-                  path="/Music"
+                  path="/MusicList"
                 />
                 <CardItem
                   src="images/Folk.png"
                   text="Folk is a term used to describe traditional music originating from a specific region among local people in non-professional settings."
                   label="Folk"
-                  path="/Music"
+                  path="/MusicList"
                 />
                 <CardItem
                   src="images/Jazz.png"
                   text="Jazz music is defined by syncopated rhythms, polyphonic ensemble playing, improvisation and unique voices."
                   label="Jazz"
-                  path="/Music"
+                  path="/MusicList"
                 />
               </ul>
             </div>
@@ -97,72 +96,11 @@ class Login extends React.Component {
         </div>
         {/*  */}
         <div className="hero-container1">
-          <img src="/videos/1.jpg" />
+          <img class="img1" src="/videos/1.jpg" />
         </div>
         {/*  */}
         <div className="cards1">
-          {/* <h1>most listened!</h1> */}
-          {/* <div className="cards__container1">
-            <div className="cards__wrapper">
-              <ul className="cards__items">
-                <CardItem
-                  src="images/Adham.jfif"
-                  label="scared"
-                  path="/Music"
-                />
-                <CardItem
-                  src="images/Adham.jfif"
-                  label="scared"
-                  path="/Music"
-                />
-                <CardItem
-                  src="images/Adham.jfif"
-                  label="scared"
-                  path="/Music"
-                />
-              </ul>
-            </div>
-          </div> */}
-          {/* <Carousel variant="dark">
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="/videos/1.jpg"
-                alt="First slide"
-              />
-              <Carousel.Caption>
-                <h5>First slide label</h5>
-                <p>
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="/videos/1.jpg"
-                alt="Second slide"
-              />
-              <Carousel.Caption>
-                <h5>Second slide label</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="/videos/1.jpg"
-                alt="Third slide"
-              />
-              <Carousel.Caption>
-                <h5>Third slide label</h5>
-                <p>
-                  Praesent commodo cursus magna, vel scelerisque nisl
-                  consectetur.
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          </Carousel> */}
+         
           <div>
             <h1 className="divh">most listened!</h1>
             <Slide easing="ease">
@@ -198,37 +136,10 @@ class Login extends React.Component {
         {/*  */}
 
         <div className="hero-container1">
-          <img src="/videos/1.jpg" />
+          <img class="img1" src="/videos/1.jpg" />
         </div>
 
         {/*  */}
-
-        {/* <div className="cards">
-          <h1>most listened!</h1>
-          <div className="cards__container">
-            <div className="cards__wrapper">
-              <ul className="cards__items">
-                <Card
-                  style={{ width: "25rem", height: "25rem", transition: "" }}
-                >
-                  <Card.Body>
-                    <Card.Text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content. Some quick example
-                      text to build on the card title and make up the bulk of
-                      the card's content.Some quick example text to build on the
-                      card title and make up the bulk of the card's content.Some
-                      quick example text to build on the card title and make up
-                      the bulk of the card's content.Some quick example text to
-                      build on the card title and make up the bulk of the card's
-                      content.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </ul>
-            </div>
-          </div>
-        </div> */}
 
         <div className="cards">
           <div className="Finaldiv">
@@ -244,4 +155,4 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+export default Home;

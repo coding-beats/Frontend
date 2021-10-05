@@ -13,7 +13,7 @@ class FavoirteList extends React.Component {
     this.state = {
       musicData: [],
       searchQuery: '',
-      showUpdateForm: false,
+      showModal: false,
       musicInfoUpdate: {}
     }
   }
@@ -58,9 +58,9 @@ class FavoirteList extends React.Component {
       email: this.props.auth0.user.email,
       id: this.state.musicInfoUpdate._id
     }
-    console.log("musicFormUpdateInfo", musicFormUpdateInfo);
+    // console.log("musicFormUpdateInfo", musicFormUpdateInfo);
     let updateData = await axios.put(`${process.env.REACT_APP_SERVER}/updateMusic`, musicFormUpdateInfo);
-    console.log("updateData", updateData.data);
+    // console.log("updateData", updateData.data);
     this.setState({
       musicData: updateData.data
     })
@@ -69,11 +69,18 @@ class FavoirteList extends React.Component {
   showUpdateMusicForm = async (musicInfo) => {
 
     await this.setState({
-      showUpdateForm: true,
+      showModal: true,
       musicInfoUpdate: musicInfo
     })
 
   }
+
+  // for the update form
+  closeModal = () => {
+    this.setState({
+      showModal: false
+    });
+  };
 
   render() {
     const { user, isAuthenticated } = this.props.auth0;
@@ -81,31 +88,30 @@ class FavoirteList extends React.Component {
       < div >
         {isAuthenticated && (
           <>
-            <img src={user.picture} alt={`${user.name} picture`} />
+            <img src={user.picture} alt={`${user.name}`}/>
             <div>Hello {user.name}</div>
             <div>{user.email}</div>
           </>
         )}
         <h1>Favoirte List</h1>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr" }}>
-          {/* get and delete functions */}
-          {this.state.musicData.map((element, index) => {
-            return (
-              <Music musicData={element}
-                index={index}
-                deleteMusicFun={this.deleteMusic}
-                showUpdateMusicForm={this.showUpdateMusicForm} />
-            )
-          })}
-          <br />
-          {/* update form */}
-          {this.state.showUpdateForm &&
-            <UpdateMusicForm
-              musicInfo={this.state.musicInfoUpdate}
-              updateMusic={this.updateMusic}
-            />}
-          <br />
-        </div >
+        <div style={{display:"grid", gridTemplateColumns:"1fr 1fr 1fr 1fr"}}>
+              {/* get and delete functions */}
+              {this.state.musicData.map((element, index) => {
+                return (
+                  <Music musicData={element}
+                    index={index}
+                    deleteMusicFun={this.deleteMusic}
+                    showUpdateMusicForm={this.showUpdateMusicForm} />
+                )
+              })}
+              {/* update form */}
+              {this.state.showModal &&
+                <UpdateMusicForm
+                  musicInfo={this.state.musicInfoUpdate}
+                  updateMusic={this.updateMusic}
+                  closeModal={this.closeModal}
+                  showModal={this.state.showModal}/>}
+        </div>
       </div >
     );
   }

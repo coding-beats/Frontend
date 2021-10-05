@@ -107,7 +107,6 @@ function Header() {
           </nav>
         </>
       }
-      {button && <Button buttonStyle="btn--outline">login</Button>}
     </>
   );
 }

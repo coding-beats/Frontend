@@ -6,7 +6,6 @@ import MusicForm from './MusicForm'
 
 class SongListRender extends Component {
     render() {
-        console.log("prpos", this.props);
         return (
             <div>
                 <Card style={{ maxWidth: "20rem", maxHeight: "38rem", margin: "2rem" }}>

@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Muli');
-* {
+.aboutUsPage {
   box-sizing: border-box;
   font-family: 'Muli', sans-serif;
 }
-body {
+
+.aboutUsPage {
   background: url('http://www.platehelp.nl/media/W1siZiIsIjIwMTUvMTAvMjcvMTBfNTZfMjBfNTU3X0lNR18xOTAxXzEuanBnIl1d/IMG_1901-1.jpg');
   background-size: cover;
-}
+} 
+.aboutUsPage{
+  font-size: 16px;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  text-align: center;
+  background-color: #f8faff;
+} 
+
 #container {
   width: auto;
   height: auto;
@@ -25,15 +33,13 @@ body {
   border: 1px solid #fff;
   width: 80%;
 }
-.card {
+#container .card {
   margin: 30px 30px;
   display: inline-block;
   position: relative;
   width: 300px;
   height: 350px;
   opacity: 0.85;
-  
-  
 }
 .front, .back {
   width: 100%;
@@ -106,12 +112,6 @@ body {
   color: #648767;
 }
 
-body {
-  font-size: 16px;
-  font-family: 'Helvetica', 'Arial', sans-serif;
-  text-align: center;
-  background-color: #f8faff;
-}
 .bubbly-button {
   font-family:'Times New Roman';
   display: inline-block;
