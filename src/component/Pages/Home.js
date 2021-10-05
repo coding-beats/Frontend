@@ -20,7 +20,7 @@ class Home extends React.Component {
     return (
       <>
         <div className="hero-container">
-          <img src="/videos/1.jpg" />
+          <img className="img1" src="/videos/1.jpg" />
           <h1>Music&beats</h1>
           <p>What are you waiting for?</p>
           <div className="hero-btns">
@@ -94,74 +94,10 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
-        {/*  */}
         <div className="hero-container1">
-          <img src="/videos/1.jpg" />
+          <img className="img1" src="/videos/1.jpg" />
         </div>
-        {/*  */}
         <div className="cards1">
-          {/* <h1>most listened!</h1> */}
-          {/* <div className="cards__container1">
-            <div className="cards__wrapper">
-              <ul className="cards__items">
-                <CardItem
-                  src="images/Adham.jfif"
-                  label="scared"
-                  path="/Music"
-                />
-                <CardItem
-                  src="images/Adham.jfif"
-                  label="scared"
-                  path="/Music"
-                />
-                <CardItem
-                  src="images/Adham.jfif"
-                  label="scared"
-                  path="/Music"
-                />
-              </ul>
-            </div>
-          </div> */}
-          {/* <Carousel variant="dark">
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="/videos/1.jpg"
-                alt="First slide"
-              />
-              <Carousel.Caption>
-                <h5>First slide label</h5>
-                <p>
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="/videos/1.jpg"
-                alt="Second slide"
-              />
-              <Carousel.Caption>
-                <h5>Second slide label</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="/videos/1.jpg"
-                alt="Third slide"
-              />
-              <Carousel.Caption>
-                <h5>Third slide label</h5>
-                <p>
-                  Praesent commodo cursus magna, vel scelerisque nisl
-                  consectetur.
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          </Carousel> */}
           <div>
             <h1 className="divh">most listened!</h1>
             <Slide easing="ease">
@@ -194,40 +130,9 @@ class Home extends React.Component {
           </div>
         </div>
 
-        {/*  */}
-
         <div className="hero-container1">
-          <img src="/videos/1.jpg" />
+          <img className="img1" src="/videos/1.jpg" />
         </div>
-
-        {/*  */}
-
-        {/* <div className="cards">
-          <h1>most listened!</h1>
-          <div className="cards__container">
-            <div className="cards__wrapper">
-              <ul className="cards__items">
-                <Card
-                  style={{ width: "25rem", height: "25rem", transition: "" }}
-                >
-                  <Card.Body>
-                    <Card.Text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content. Some quick example
-                      text to build on the card title and make up the bulk of
-                      the card's content.Some quick example text to build on the
-                      card title and make up the bulk of the card's content.Some
-                      quick example text to build on the card title and make up
-                      the bulk of the card's content.Some quick example text to
-                      build on the card title and make up the bulk of the card's
-                      content.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </ul>
-            </div>
-          </div>
-        </div> */}
 
         <div className="cards">
           <div className="Finaldiv">
