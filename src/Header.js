@@ -47,7 +47,7 @@ function Header() {
               </div>
               <ul className={click ? "nav-menu active" : "nav-menu"}>
                 <li className="nav-item">
-                  <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                  <Link to="/" className="nav-links2"  onClick={closeMobileMenu}>
                     Home
                   </Link>
                 </li>
@@ -99,10 +99,11 @@ function Header() {
                     AboutUs
                   </Link>
                 </li>
-                <li className="nav-item">
+                
+              </ul>
+              <li className="nav-item-login">
                     <LogoutButton onClick={closeMobileMenu}/>
                 </li>
-              </ul>
             </div>
           </nav>
         </>
