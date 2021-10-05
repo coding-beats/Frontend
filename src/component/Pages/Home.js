@@ -2,8 +2,7 @@
 import React from "react";
 import "./Home.css";
 import CardItem from "../CardItem";
-import { Card, Button } from "react-bootstrap";
-// import { Carousel } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import { Slide } from "react-slideshow-image";
@@ -16,7 +15,7 @@ const slideImages = [
   "images/EDM.png",
 ];
 
-class Login extends React.Component {
+class Home extends React.Component {
   render() {
     return (
       <>
@@ -244,4 +243,4 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+export default Home;
