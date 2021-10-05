@@ -27,7 +27,6 @@ class FavoirteList extends React.Component {
 
     let mData = await axios.get(musicUrl);
 
-    console.log("aaaaaaaa",mData.data);
     this.setState({
       musicData: mData.data
     })
@@ -51,6 +50,7 @@ class FavoirteList extends React.Component {
     e.preventDefault();
 
     let musicFormUpdateInfo = {
+      img: this.state.musicInfoUpdate.img,
       title: this.state.musicInfoUpdate.title,
       artist: this.state.musicInfoUpdate.artist,
       note: e.target.note.value,
@@ -58,9 +58,9 @@ class FavoirteList extends React.Component {
       email: this.props.auth0.user.email,
       id: this.state.musicInfoUpdate._id
     }
-
+    console.log("musicFormUpdateInfo", musicFormUpdateInfo);
     let updateData = await axios.put(`${process.env.REACT_APP_SERVER}/updateMusic`, musicFormUpdateInfo);
-
+    console.log("updateData", updateData.data);
     this.setState({
       musicData: updateData.data
     })
@@ -87,31 +87,25 @@ class FavoirteList extends React.Component {
           </>
         )}
         <h1>Favoirte List</h1>
-        <Card style={{ width: "50%", marginBottom: '25px' }}>
-          <Card.Body>
-            <Card.Title>Favoirte List</Card.Title>
-            <Card.Text>
-              <br />
-              {/* get and delete functions */}
-              {this.state.musicData.map((element, index) => {
-                return (
-                  <Music musicData={element}
-                    index={index}
-                    deleteMusicFun={this.deleteMusic}
-                    showUpdateMusicForm={this.showUpdateMusicForm} />
-                )
-              })}
-              <br />
-              {/* update form */}
-              {this.state.showUpdateForm &&
-                <UpdateMusicForm
-                  musicInfo={this.state.musicInfoUpdate}
-                  updateMusic={this.updateMusic}
-                />}
-              <br />
-            </Card.Text>
-          </Card.Body>
-        </Card>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr" }}>
+          {/* get and delete functions */}
+          {this.state.musicData.map((element, index) => {
+            return (
+              <Music musicData={element}
+                index={index}
+                deleteMusicFun={this.deleteMusic}
+                showUpdateMusicForm={this.showUpdateMusicForm} />
+            )
+          })}
+          <br />
+          {/* update form */}
+          {this.state.showUpdateForm &&
+            <UpdateMusicForm
+              musicInfo={this.state.musicInfoUpdate}
+              updateMusic={this.updateMusic}
+            />}
+          <br />
+        </div >
       </div >
     );
   }

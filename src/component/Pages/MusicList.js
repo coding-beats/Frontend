@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import SongExplorer from '../SongExplorer'
 import MusicForm from '../MusicForm.js';
+import ListOfMusicRender from '../ListOfMusicRender.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { withAuth0 } from '@auth0/auth0-react';
 
@@ -15,13 +16,21 @@ class Music extends React.Component {
     this.state = {
       musicData: [],
       songResult: {},
+      songListResult: {},
       searchQuery: '',
       showSongInfo: false,
       showError: false,
       showUpdateForm: false,
+      showTop20: false,
     }
   }
 
+  componentDidMount = async () => {
+
+    this.getSongListFun();
+  }
+
+  // search
   getSongFun = async (event) => {
     event.preventDefault();
     try {
@@ -29,7 +38,7 @@ class Music extends React.Component {
         searchQuery: event.target.song.value
       })
 
-      let reqUrl = `http://localhost:3001/getMusicList?song=${this.state.searchQuery}`;
+      let reqUrl = `http://localhost:3001/getMusicSearch?song=${this.state.searchQuery}`;
 
       let sResult = await axios.get(reqUrl);
       this.setState({
@@ -37,7 +46,7 @@ class Music extends React.Component {
         showSongInfo: true
       })
     }
-    
+
     catch {
       this.setState({
         showError: true,
@@ -45,18 +54,43 @@ class Music extends React.Component {
       })
     }
   }
+
+  getSongListFun = async () => {
+    try {
+
+      let reqUrl = `http://localhost:3001/getMusicList?id=40008598`;
+
+      let sResult = await axios.get(reqUrl);
+      // console.log("sResult",sResult.data);
+      this.setState({
+        songListResult: sResult.data,
+        showTop20: true
+      })
+      // console.log(this.state.showTop20);
+      console.log("songListResult", this.state.songListResult);
+    }
+
+    catch {
+      this.setState({
+        showError: true,
+        showTop20: false
+      })
+    }
+  }
+
   // add music function
   createMusic = async (e, songResult) => {
     e.preventDefault()
-      
+    console.log(songResult);
     let musicFormInfo = await {
-      title1: songResult[0].title,
-      artist1: songResult[0].artist,
+      img1: songResult.img? songResult.img : songResult[0].img,
+      title1: songResult.title? songResult.title : songResult[0].title,
+      artist1: songResult.artist? songResult.artist : songResult[0].artist,
       note1: e.target.note.value,
-      songUrl1: songResult[0].songURL,
+      songUrl1: songResult.songURL? songResult.songURL : songResult[0].songURL,
       email1: this.props.auth0.user.email
     }
-    console.log("musicFormInfo",musicFormInfo);
+    // console.log("musicFormInfo", musicFormInfo);
 
     let createData = await axios.post(`${process.env.REACT_APP_SERVER}/createMusic`, musicFormInfo);
 
@@ -65,12 +99,9 @@ class Music extends React.Component {
     })
 
   }
-
   render() {
     return (
-      <div>
-
-        <br />
+      <div style={{textAlign:"center"}}>
         <Form onSubmit={this.getSongFun}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Control type="text" name='song' placeholder="Enter Song Name" />
@@ -79,29 +110,37 @@ class Music extends React.Component {
             Search! 🔍
           </Button>
         </Form>
-        <br />
-
         {this.state.showSongInfo &&
-          <div>
-            <Card style={{ width: '40%' }}>
+          <div >
+            <Card style={{ maxWidth: "20rem", maxHeight: "38rem", margin: "2rem"}}>
               <Card.Body>
-                <Card.Title>song info</Card.Title>
                 <Card.Text>
-                  <br />
                   {this.state.songResult.map(info => {
                     return (
                       <SongExplorer songResult={info} />
                     )
                   })}
-                  <br />
-                  {/* add music functions */}
+
+                  {/* add music functions from serch bar */}
                   <MusicForm songResult={this.state.songResult} createMusicFun={this.createMusic} />
-                  <br />
+                  {/* show list */}
                 </Card.Text>
               </Card.Body>
             </Card>
           </div>
         }
+        {this.state.showTop20 &&
+          <div style={{display:"grid", gridTemplateColumns:"1fr 1fr 1fr 1fr"}}>
+            {
+              this.state.songListResult.map(info => {
+                return (
+                  <>
+                    <ListOfMusicRender songListResult={info} 
+                    createMusicFun={this.createMusic}/>
+                  </>
+                )
+              })}
+          </div>}
 
         {this.state.showError &&
           <div>
