@@ -17,7 +17,7 @@ class AboutUs extends React.Component {
  <><img style ={{backgroundSize:"cover", width:"100%"}}src="https://cutewallpaper.org/21/4k-music-wallpaper/Music-Headphones-Hd-Wallpaper-for-Desktop-and-Mobiles-4K-.jpg" />
 
  
- <a style={{scrollBehavior: "smooth", position:"relative", bottom:"909px", left: "620px"}} href="#container"><button class ="bubbly-button" type="button">Meet us down</button></a>
+ <a style={{scrollBehavior: "smooth", position:"relative", bottom:"830px", right: "-600px"}} href="#container"><button class ="bubbly-button" type="button">Meet us down</button></a>
 
 
  <br></br>
