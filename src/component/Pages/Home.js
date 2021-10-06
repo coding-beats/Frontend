@@ -9,11 +9,11 @@ import { Slide } from "react-slideshow-image";
 import { withAuth0 } from '@auth0/auth0-react';
 
 const slideImages = [
-  "images/Hip-Hop1.png",
-  "images/Adham_1.jpg",
-  "images/Rihanna.gif",
-  "images/Adham.jfif",
-  "images/EDM.png",
+  "images/lilnaz.jpg",
+  "images/weekend.jpg",
+  "images/madisonbae.jpg",
+  "images/pink.jpg",
+  "images/rickrolled.jpg",
 ];
 
 class Home extends React.Component {
@@ -149,7 +149,7 @@ class Home extends React.Component {
           <div className="Finaldiv">
             <p>
               <h2>Our Vision:</h2>
-              This application helps people to listen to their favorite songs and see the most listened to songs in an easy and fast way. The application provides them with many advantages, including listening to songs, adding comments, adding songs to favorites, and deleting songs from them.
+              This application alows people to listen to their favorite songs from all kind of genres and and have a look at the most listened to songs. The application provides them with many advantages, such as having a demo at the song they are looking for, adding comments and notes, adding their favorit songs to a local library that alows you to deleting songs from them and update the comments.
             </p>
             <div style={{ backgroundImage: `url(https://images-ext-1.discordapp.net/external/rsAinBEvXxiQdBAi9s3NduWjbkVxe2Gaf9X_5yibRTQ/https/wallpaperaccess.com/full/3634688.jpg?width=1050&height=670)` }}></div>
           </div>
