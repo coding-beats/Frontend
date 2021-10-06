@@ -1,7 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Footer.css';
-import { Button } from './Button';
 import { Link } from 'react-router-dom';
 
 class Footer extends React.Component {
@@ -41,10 +40,6 @@ class Footer extends React.Component {
       <section class='social-media'>
         <div class='social-media-wrap'>
           <div class='footer-logo'>
-            <Link to='/' className='social-logo'>
-            Music&beats
-              <i class='fab fa-typo3' />
-            </Link>
           </div>
           <small class='website-rights'>Music&beats © 2021</small>
           <div class='social-icons'>
@@ -90,7 +85,7 @@ class Footer extends React.Component {
             </Link>
             <Link
               class='social-icon-link github'
-              to='/'
+              to= 'https://github.com/coding-beats'
               target='_blank'
               aria-label='github'
             >

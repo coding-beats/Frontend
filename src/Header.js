@@ -37,20 +37,28 @@ function Header() {
         <>
           <nav className="navbar">
             <div className="navbar-container">
-              <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-                Music&beats
+            <li className="navbar-logo" onClick={closeMobileMenu}>
+                Music
                 <i class="fab fa-typo3" />
-              </Link>
+              </li>
+              <li className="navbar-logo1" onClick={closeMobileMenu}>
+                &
+                <i class="fab fa-typo3" />
+              </li>
+              <li className="navbar-logo2" onClick={closeMobileMenu}>
+                Beats
+                <i class="fab fa-typo3" />
+              </li>
               <div className="menu-icon" onClick={handleClick}>
                 <i className={click ? "fas fa-times" : "fas fa-bars"} />
               </div>
               <ul className={click ? "nav-menu active" : "nav-menu"}>
                 <li className="nav-item">
-                  <Link to="/" className="nav-links2" onClick={closeMobileMenu}>
+                  <Link to="/" className="nav-links3" onClick={closeMobileMenu}>
                     Home
                   </Link>
                 </li>
-                <li className="nav-links">
+                <li className="nav-links2">
                   <LoginButton onClick={closeMobileMenu} />
                 </li>
               </ul>
@@ -62,10 +70,18 @@ function Header() {
         <>
           <nav className="navbar">
             <div className="navbar-container">
-              <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-                Music&beats
+              <li className="navbar-logo" onClick={closeMobileMenu}>
+                Music
                 <i class="fab fa-typo3" />
-              </Link>
+              </li>
+              <li className="navbar-logo1" onClick={closeMobileMenu}>
+                &
+                <i class="fab fa-typo3" />
+              </li>
+              <li className="navbar-logo2" onClick={closeMobileMenu}>
+                Beats
+                <i class="fab fa-typo3" />
+              </li>
               <div className="menu-icon" onClick={handleClick}>
                 <i className={click ? "fas fa-times" : "fas fa-bars"} />
               </div>

@@ -22,8 +22,8 @@ class Home extends React.Component {
     return (
       <>
         <div className="hero-container">
-          <img class="img1" src="/videos/1.jpg" />
-          <h1 class="h1Home">Music&beats</h1>
+          <img class="img1" src="/videos/Music&Beats.png" />
+          {/* <h1 class="h1Home">Music&beats</h1> */}
           <p>What are you waiting for?</p>
           <div className="hero-btns">
             {this.props.auth0.isAuthenticated ?
@@ -48,7 +48,7 @@ class Home extends React.Component {
         </div>
         {/*  */}
         <div className="cards">
-          <h1 class="h1Home">Kinds of songs we offer!</h1>
+          <h1 class="h1Home">Types Of Songs We Offer</h1>
           <div className="cards__container">
             <div className="cards__wrapper">
               <ul className="cards__items">
@@ -108,13 +108,13 @@ class Home extends React.Component {
         </div>
         {/*  */}
         <div className="hero-container1">
-          <img class="img1" src="/videos/1.jpg" />
+          <img class="Img99" src="/videos/Music&Beats.png" />
         </div>
         {/*  */}
         <div className="cards1">
 
           <div>
-            <h1 className="divh">most listened!</h1>
+            <h1 className="divh">Famous Songs</h1>
             <Slide easing="ease">
               <div className="each-slide">
                 <div
@@ -144,14 +144,6 @@ class Home extends React.Component {
             </Slide>
           </div>
         </div>
-
-        {/*  */}
-
-        <div className="hero-container1">
-          <img class="img1" src="/videos/1.jpg" />
-        </div>
-
-        {/*  */}
 
         <div className="cards">
           <div className="Finaldiv">
