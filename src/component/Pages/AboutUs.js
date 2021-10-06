@@ -14,14 +14,16 @@ class AboutUs extends React.Component {
     return (
 
 
-      <div class="aboutUsPage">
-        <img style={{ backgroundSize: "cover", width: "100%" }} src="https://cutewallpaper.org/21/4k-music-wallpaper/Music-Headphones-Hd-Wallpaper-for-Desktop-and-Mobiles-4K-.jpg" />
+      <div class="aboutUsPage" style={{ textAlign:"center",position:"relative", bottom:"200px" }}>
+        {/* <img style={{ backgroundSize: "cover", width: "100%", height:"700px" }} src="https://wallpaperaccess.com/full/2502641.jpg" /> */}
 
+        <section style={{backgroundSize:"cover" ,backgroundRepeat:"no-repeat",backgroundImage: "url(https://www.xmple.com/wallpaper/blue-pink-gradient-linear-2560x1440-c2-ff69b4-87ceeb-a-15-f-14.svg)", height:"700px"}} >
 
-        <a style={{ scrollBehavior: "smooth", position: "relative", bottom: "830px", right: "-600px" }} href="#container"><button class="bubbly-button" type="button">Meet us down</button></a>
-
+        </section>
         <div id="container">
-          <h1 style={{ color: "black", fontFamily: "cursive" }}> Our Team </h1>
+          {/* <h1 style={{ color: "black", fontFamily: "cursive" }}> Our Team </h1> */}
+          < h1 style ={{color:"black",position:"relative", bottom:"280px",fontFamily:"cursive", textAlign:"center", textShadow:"2px 2px black" }}>Coding & Beats Organization <br></br> <br></br> Meet Our Team </h1>
+          
           <hr />
           <div className="card">
             <div className="front">
