@@ -1,13 +1,24 @@
+*{
+  font-family: "cursive";
+}
 .img1 {
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   position: fixed;
   z-index: -1;
 }
 
+.Img99 {
+  object-fit: cover;
+  width: 100%;
+  /* height: 100%; */
+  /* position: fixed; */
+  z-index: -1;
+}
+
 .hero-container {
-  height: 100vh;
+  height: 75vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -36,19 +47,28 @@
 }
 
 .hero-container > p {
-  margin-top: 8px;
+  margin-top: 400px;
   color: #fff;
   font-size: 32px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
 }
 
-.hero-btns {
-  margin-top: 32px;
-}
 
 .hero-btns .btn {
   margin: 6px;
+  border-radius: 7px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-weight: 550;
+  text-align: center;
+  font-size: 120%;
+
+}
+
+.hero-btns:hover .btn {
+  background-color: rgb(255, 255, 255); 
+  color: black; 
 }
 
 .fa-play-circle {
@@ -96,9 +116,18 @@
 
 
 .h1Home {
-  text-align: center;
+  /* text-align: center; */
+  display: inline;
+  margin-left: 35.8%;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e173bc;
+  
 }
 
+.h1Home1 {
+  text-align: center;
+  /* border-bottom: 2px solid #ff00b3; */
+}
 
 /* Cards */
 
@@ -118,6 +147,7 @@
 
 .cards__items {
   margin-bottom: 24px;
+  margin-top: 20px;
 }
 
 .cards__item {
@@ -223,11 +253,12 @@
   align-items: center;
   justify-content: center;
   background-size: cover;
-  height: 350px;
+  height: 500px;
   width: 80%;
   margin-left: 11%;
   margin-right: 12%;
   animation-delay: 1s;
+  
 }
 
 /*  */
@@ -237,22 +268,18 @@
 
 .Finaldiv div{
   margin-left: 50%;
-  margin-top: -29%;
+  margin-top: -30%;
   background-size: cover;
-  /* float: right; */
   height: 400px;
   width: 40%;
   margin-left: 55%;
-  /* border: 2px red solid; */
 }
 
 
 .Finaldiv p{
   
   text-align: left;
-  /* border: 2px red solid; */
   max-width: 45%;
-  /* padding-top: 5%; */
   margin-right: 250px;
   font-size: 25px;
   font-weight: 650;
@@ -265,7 +292,7 @@
 .Finaldiv p h2{
   font-size: 40px;
   font-weight: 650;
-  margin-left: -15px;
+  margin-left: -3px;
   margin-top: -10px;
   margin-bottom: 10px;
 }
@@ -278,5 +305,8 @@
 .divh{
   text-align: center;
   margin: -10px 0 35px 25px;
-
+  border-bottom: 2px solid #90f0f5;
+  width: 35%;
+  margin-left: 33%;
+  padding-bottom: 10px;
 }

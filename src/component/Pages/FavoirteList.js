@@ -94,7 +94,7 @@ class FavoirteList extends React.Component {
             {/* <div>{user.email}</div> */}
           </section><div style={{position:"relative", bottom:"375px", right:"500px",fontFamily: "cursive", textShadow:"1px 1px black", fontSize:"30px" }}>Hello {user.name}</div></>
         )}
-        <h1 style={{fontFamily: "cursive", textDecoration:"underline solid lightBlue 5px"}}>favourite List</h1>
+        <h1 style={{fontFamily: "cursive", textDecoration:"underline solid lightBlue 5px"}}>Favourite List</h1>
         <div style={{display:"grid", gridTemplateColumns:"1fr 1fr 1fr 1fr"}}>
               {/* get and delete functions */}
               {this.state.musicData.map((element, index) => {

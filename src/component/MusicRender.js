@@ -27,7 +27,7 @@ class MusicRender extends Component {
                         <Card.Text class="text">Note: {this.props.musicData.note}</Card.Text>
                         </section>
                         <Card.Text class="buttons">
-                            <Button  style={{fontFamily: 'Times New Roman', width:"130px" ,position:"relative",left:"72px" ,backgroundColor: "#4acacf",color: "black", marginTop:"2px", borderRadius: "16px", bottom:"9px"}} variant="primary" type="submit" href={this.props.musicData.songUrl}>
+                            <Button  style={{fontFamily: 'Times New Roman', width:"130px" ,position:"relative",left:"72px" ,backgroundColor: "#4acacf",color: "black", marginTop:"2px", borderRadius: "16px", bottom:"-7px"}} variant="primary" type="submit" href={this.props.musicData.songUrl}>
                                Listen ♬
                             </Button>
                         </Card.Text>

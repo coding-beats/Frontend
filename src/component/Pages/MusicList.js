@@ -108,12 +108,11 @@ class Music extends React.Component {
     return (
       <div style={{ textAlign:"center" , position: "relative",bottom:"200px" }}>
          <section style={{backgroundSize:"cover" ,backgroundRepeat:"no-repeat",backgroundImage: "url(https://wallpaperaccess.com/full/2502641.jpg)", height:"700px", paddingBottom:"0%"}}  >
-            <h1 style ={{color:"white",position:"relative", top:"30px",fontFamily:"Times New Roman" }}> you are what you listen to</h1>  
         <Form onSubmit={this.getSongFun}>
-          <Form.Group style={{paddingTop:"20%",display:"inline-block",position:"relative",right:"150px"}} className="mb-3" controlId="formBasicEmail">
+          <Form.Group style={{paddingTop:"23%",display:"inline-block",position:"relative",right:"150px"}} className="mb-3" controlId="formBasicEmail">
             <Form.Control style={{ height:"40px", width:"350px", marginLeft:"40.5%", marginBottom:"25px", marginTop:"25px", boxShadow: "10px 10px 5px grey"}} type="text" name='song' placeholder="Enter Song Name" />
           </Form.Group>
-          <Button style={{position:"relative",left:"1px", top:"10px",borderRadius: "16px",backgroundColor: "black" , boxShadow: "10px 10px 5px grey",height:"40px" }} variant="primary" type="submit">
+          <Button style={{position:"relative",left:"1px",borderRadius: "16px",backgroundColor: "black" , boxShadow: "10px 10px 5px grey",height:"40px" }} variant="primary" type="submit">
             Search! 🔍
           </Button>
         </Form>

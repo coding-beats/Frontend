@@ -1,12 +1,3 @@
-/* a{
-  color:#fff;
-  margin: 10px;
-}
-
-a:hover{
-  color:darkgrey;
-} */
-
 .navbar {
   background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   height: 80px;
@@ -28,9 +19,8 @@ a:hover{
 }
 
 .navbar-logo {
-  color: #fff;
+  color: #90f0f5;
   justify-self: start;
-  margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
@@ -38,6 +28,34 @@ a:hover{
   align-items: center;
   margin-top: -25px;
 }
+
+.navbar-logo1 {
+  color: #fff;
+  margin-left: -5px;
+  justify-self: start;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  margin-top: -25px;
+}
+
+.navbar-logo2 {
+  color: #e284c4;
+  margin-left: -5px;
+  justify-self: start;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  margin-top: -25px;
+}
+
+/* .navbar-logo:hover {
+  color: rgb(201, 20, 162);
+} */
 
 .fa-typo3 {
   margin-left: 0.5rem;
@@ -71,26 +89,51 @@ a:hover{
   padding: 0rem 1rem;
   height: 100%;
 }
+
+.nav-links3 {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0rem 1rem;
+  height: 190%;
+}
+
 .nav-links2 {
   color: #fff;
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0rem 1rem;
-  height: 150%;
+  height: 130%;
 }
+
 .nav-links:hover {
   opacity: 0.6;
   transition: all 0.1s ease-out;
+  color: #ff00ae;
+  padding: 2px;
+  font-size: 30px;
+  /* border-bottom: 2px solid #fff; */
 }
 
+
+.nav-links3:hover {
+  opacity: 0.6;
+  transition: all 0.1s ease-out;
+  color: #ff00ae;
+  padding: 2px;
+  font-size: 30px;
+  /* border-bottom: 2px solid #fff; */
+}
+
+
 .nav-links2:hover {
- 
+  color: #ff00ae;
   transition: all 0.3s ease-out;
 }
 
 .nav-links:hover {
-  border-bottom: 4px solid #fff;
   transition: all 0.2s ease-out;
 }
 
@@ -166,7 +209,7 @@ a:hover{
     font-size: 2rem;
   }
 
-  .nav-links-mobile {
+  /* .nav-links-mobile {
     display: block;
     text-align: center;
     margin: 2rem auto;
@@ -180,10 +223,9 @@ a:hover{
     border: 1px solid #fff;
     transition: all 0.3s ease-out;
   }
-
   .nav-links-mobile:hover {
     background: #fff;
     color: #242424;
     transition: 250ms;
-  }
+  } */
 }

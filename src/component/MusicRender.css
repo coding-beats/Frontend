@@ -2,20 +2,12 @@
     padding-bottom: 5px;
     padding-top: 5px;
 }
-/* 
-body{
-    background-color:#b6ad90
-    } */
+
+
 .card{
-  background-image: url(  https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHNwYWNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
+  background-image: url(  https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHNwYWNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60)
 
 }
-#music{
-background-color: #ffb3c1;
-
-}
-
-
 
 .text{
 font-family: 'Times New Roman', Times, serif;
@@ -26,13 +18,7 @@ color:whitesmoke
 border-style: groove;
 border-radius: 3px;
 border-color: slategrey;
-
-
 }
-/* .background{
-background-repeat: no-repeat;
-background-size: cover;
-} */
 
 .background{
 background-repeat: "no-repeat";
