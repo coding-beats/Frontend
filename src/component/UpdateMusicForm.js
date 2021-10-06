@@ -19,13 +19,13 @@ class UpdateMusicForm extends Component {
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Control type="text" name='note' placeholder="Enter Your Note" defaultValue={this.props.musicInfo.note} />
                             </Form.Group>
-                            <Button variant="primary" type="submit" onSubmit={this.props.updateMusic}>
+                            <Button style={{fontFamily: 'Times New Roman',position:"relative",left:"1px", top:"10px",borderRadius: "16px",backgroundColor: "#4acacf" , color:"black"}} variant="primary" type="submit" onSubmit={this.props.updateMusic}>
                                 Update! ✔
                             </Button>
                         </Form>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={this.props.closeModal}>
+                        <Button style={{borderRadius: "16px", fontFamily: 'Times New Roman',backgroundColor: "grey"}} variant="secondary" onClick={this.props.closeModal}>
                             Close
                         </Button>
                     </Modal.Footer>

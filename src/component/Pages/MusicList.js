@@ -106,14 +106,14 @@ class Music extends React.Component {
   }
   render() {
     return (
-      <div style={{ textAlign:"center" }}>
-         <section style={{backgroundSize:"cover" ,backgroundRepeat:"no-repeat",backgroundImage: "url(https://images.unsplash.com/photo-1510915361894-db8b60106cb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60)", height:"700px"}} >
+      <div style={{ textAlign:"center" , position: "relative",bottom:"200px" }}>
+         <section style={{backgroundSize:"cover" ,backgroundRepeat:"no-repeat",backgroundImage: "url(https://wallpaperaccess.com/full/2502641.jpg)", height:"700px", paddingBottom:"0%"}}  >
             <h1 style ={{color:"white",position:"relative", top:"30px",fontFamily:"Times New Roman" }}> you are what you listen to</h1>  
         <Form onSubmit={this.getSongFun}>
-          <Form.Group style={{paddingTop:"20%",display:"inline-block", position:"relative",right:"150px"}} className="mb-3" controlId="formBasicEmail">
-            <Form.Control style={{ width:"300px", marginLeft:"40.5%", marginBottom:"25px", marginTop:"25px"}} type="text" name='song' placeholder="Enter Song Name" />
+          <Form.Group style={{paddingTop:"20%",display:"inline-block",position:"relative",right:"150px"}} className="mb-3" controlId="formBasicEmail">
+            <Form.Control style={{ height:"40px", width:"350px", marginLeft:"40.5%", marginBottom:"25px", marginTop:"25px", boxShadow: "10px 10px 5px grey"}} type="text" name='song' placeholder="Enter Song Name" />
           </Form.Group>
-          <Button style={{position:"relative",left:"1px", top:"9px" ,backgroundColor: "#191970"  }} variant="primary" type="submit">
+          <Button style={{position:"relative",left:"1px", top:"10px",borderRadius: "16px",backgroundColor: "black" , boxShadow: "10px 10px 5px grey",height:"40px" }} variant="primary" type="submit">
             Search! 🔍
           </Button>
         </Form>
@@ -125,10 +125,12 @@ class Music extends React.Component {
          <Else>
 
          
-        < h1 style ={{color:"black",position:"relative", top:"30px",fontFamily:"Times New Roman", marginBottom:"30px",right:"590px" }}>Top 20 songs</h1>
+        < h1 style ={{color:"black",position:"relative", top:"30px",fontFamily:"cursive", marginBottom:"30px", textAlign:"center" , textDecoration:"underline solid pink 5px"}}>Top 20 Songs
+        <br/> <br/> 
+        </h1>
         {this.state.showSongInfo &&
           <div style={{marginLeft:"35%" , marginRight:"15%"}}>
-            <Card style={{ maxWidth: "50%", maxHeight: "38rem", margin: "2rem", textAlign:"center"}}>
+            <Card style={{ maxWidth: "50%", maxHeight: "38rem", margin: "2rem", textAlign:"center", boxShadow:" 10px 10px 5px grey"}}>
               <Card.Body>
                 <Card.Text>
                   {this.state.songResult.map(info => {

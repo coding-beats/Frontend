@@ -12,16 +12,49 @@ import Ziyad from "../../Images/Ziyad.jpg";
 class AboutUs extends React.Component {
   render() {
     return (
+      <div
+        class="aboutUsPage"
+        style={{ textAlign: "center", position: "relative", bottom: "200px" }}
+      >
+        {/* <img style={{ backgroundSize: "cover", width: "100%", height:"700px" }} src="https://wallpaperaccess.com/full/2502641.jpg" /> */}
 
-
-      <div class="aboutUsPage">
-        <img style={{ backgroundSize: "cover", width: "100%" }} src="https://cutewallpaper.org/21/4k-music-wallpaper/Music-Headphones-Hd-Wallpaper-for-Desktop-and-Mobiles-4K-.jpg" />
-
-
-        <a style={{ scrollBehavior: "smooth", position: "relative", bottom: "830px", right: "-600px" }} href="#container"><button class="bubbly-button" type="button">Meet us down</button></a>
-
+        <section
+          style={{
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundImage:
+              "url(https://www.xmple.com/wallpaper/blue-pink-gradient-linear-2560x1440-c2-ff69b4-87ceeb-a-15-f-14.svg)",
+            height: "700px",
+          }}
+        ></section>
         <div id="container">
-          <h1 style={{ color: "black", fontFamily: "cursive" }}> Our Team </h1>
+          {/* <h1 style={{ color: "black", fontFamily: "cursive" }}> Our Team </h1> */}
+          <h1
+            style={{
+              color: "black",
+              position: "relative",
+              bottom: "280px",
+              fontFamily: "cursive",
+              textAlign: "center",
+              textShadow: "2px 2px black",
+            }}
+          >
+            Special Thanks From Our Coding & Beats Team{" "}
+          </h1>
+          <h1
+            style={{
+              color: "black",
+              position: "relative",
+              marginTop: "-30px",
+              fontFamily: "cursive",
+              textAlign: "center",
+              textShadow: "2px 2px black",
+              textDecoration: "underline solid pink 5px",
+            }}
+          >
+            {" "}
+            Meet Coding & Beats Team{" "}
+          </h1>
           <hr />
           <div className="card">
             <div className="front">
@@ -31,7 +64,8 @@ class AboutUs extends React.Component {
                   backgroundImage: `url(${Yasmeen})`,
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
-                }} />
+                }}
+              />
 
               <span className="name">Yasmeen Al-Kelani</span>
               <hr />
@@ -63,7 +97,8 @@ class AboutUs extends React.Component {
                   backgroundImage: `url(${Haneen})`,
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
-                }} />
+                }}
+              />
 
               <span className="name">Haneen Jaradeh</span>
               <hr />
@@ -95,7 +130,8 @@ class AboutUs extends React.Component {
                   backgroundImage: `url(${Hussein})`,
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
-                }} />
+                }}
+              />
 
               <span className="name">Hussein Al-Karmi</span>
               <hr />
@@ -128,7 +164,8 @@ class AboutUs extends React.Component {
                   backgroundImage: `url(${Ziyad})`,
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
-                }} />
+                }}
+              />
 
               <span className="name">Ziyad Haitham Saleh</span>
               <hr />
@@ -160,7 +197,8 @@ class AboutUs extends React.Component {
                   backgroundImage: `url(${Ahmad})`,
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
-                }} />
+                }}
+              />
 
               <span className="name">Ahmad Abu-Laban</span>
               <hr />
@@ -192,7 +230,8 @@ class AboutUs extends React.Component {
                   backgroundImage: `url(${Morad})`,
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
-                }} />
+                }}
+              />
 
               <span className="name">Morad Abu-Arqoub</span>
               <hr />

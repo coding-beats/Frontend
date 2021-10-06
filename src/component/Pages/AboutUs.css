@@ -26,19 +26,19 @@
 #container h1 {
   color: #ECF6CE;
   margin-bottom: 30px;
- 
 }
+
 #container > hr {
   border: none;
   border: 1px solid #fff;
   width: 80%;
 }
 #container .card {
-  margin: 30px 30px;
+  margin: 10px 20px;
   display: inline-block;
   position: relative;
-  width: 300px;
-  height: 350px;
+  width: 250px;
+  height: 300px;
   opacity: 0.85;
 }
 .front, .back {
@@ -57,14 +57,14 @@
 }
 .front {
   transform: rotateY(0deg);
-  background: -webkit-linear-gradient(top left, #75c98e, #009970);
-  background: linear-gradient(to bottom right, #04696d, #009970);
+  /* background: -webkit-linear-gradient(top left, #75c98e, #009970);
+  background: linear-gradient(to bottom right, #04696d, #009970); */
   text-align: center;
   padding: 30px;
 }
 .back {
-  background: -webkit-linear-gradient(top left, #009970, #04696d);
-  background: linear-gradient(to bottom right, #009970, #04696d);
+  /* background: -webkit-linear-gradient(top left, #009970, #04696d);
+  background: linear-gradient(to bottom right, #009970, #04696d); */
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
   padding: 40px 15px;

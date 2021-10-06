@@ -85,15 +85,16 @@ class FavoirteList extends React.Component {
   render() {
     const { user, isAuthenticated } = this.props.auth0;
     return (
-      < div >
+      < div style={{ textAlign:"center" , position: "relative",bottom:"350px" }} >
         {isAuthenticated && (
-          <>
-            <img src={user.picture} alt={`${user.name}`}/>
-            <div>Hello {user.name}</div>
-            <div>{user.email}</div>
-          </>
+
+           <><section style={{ backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundImage: "url(https://i.pinimg.com/originals/65/13/2a/65132a90ac77939fa24caa27bdef1c9d.png)", height: "850px", paddingBottom: "0%" }}>
+
+            {/* <img src={user.picture} alt={`${user.name}`}/> */}
+            {/* <div>{user.email}</div> */}
+          </section><div style={{position:"relative", bottom:"375px", right:"500px",fontFamily: "cursive", textShadow:"1px 1px black", fontSize:"30px" }}>Hello {user.name}</div></>
         )}
-        <h1>Favoirte List</h1>
+        <h1 style={{fontFamily: "cursive", textDecoration:"underline solid lightBlue 5px"}}>favourite List</h1>
         <div style={{display:"grid", gridTemplateColumns:"1fr 1fr 1fr 1fr"}}>
               {/* get and delete functions */}
               {this.state.musicData.map((element, index) => {
