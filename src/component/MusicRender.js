@@ -17,7 +17,7 @@ class MusicRender extends Component {
         return (
             <div key={this.props.idx}>
                 <Card style={{ maxWidth: "20rem", maxHeight: "38rem", margin: "2rem" }}>
-                <Card.Img variant="top" src={this.props.musicData.img} style={{ maxWidth: "90%", maxHeight: "15rem", margin: "1rem" }}/>
+                <Card.Img class="image" variant="top" src={this.props.musicData.img} style={{ maxWidth: "90%", maxHeight: "15rem", margin: "1rem" }}/>
                     <Card.Body>
                         <Card.Title>Music Info</Card.Title>
                         <Card.Text>Title: {this.props.musicData.title}</Card.Text>

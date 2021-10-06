@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button } from "./Button";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import LoginButton from './component/LoginButton';
@@ -100,9 +99,9 @@ function Header() {
                   </Link>
                 </li>
               </ul>
-              <li className="nav-item-logout">
+              <div className="nav-item-logout">
                 <LogoutButton onClick={closeMobileMenu} />
-              </li>
+                </div>
             </div>
           </nav>
         </>

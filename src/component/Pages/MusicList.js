@@ -8,6 +8,8 @@ import MusicForm from '../MusicForm.js';
 import ListOfMusicRender from '../ListOfMusicRender.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { withAuth0 } from '@auth0/auth0-react';
+import Loader from "../LoadingScreen"
+import {If,Then,Else} from "react-if"
 
 class Music extends React.Component {
 
@@ -22,6 +24,7 @@ class Music extends React.Component {
       showError: false,
       showUpdateForm: false,
       showTop20: false,
+      showLoder: false
     }
   }
 
@@ -35,7 +38,8 @@ class Music extends React.Component {
     event.preventDefault();
     try {
       await this.setState({
-        searchQuery: event.target.song.value
+        searchQuery: event.target.song.value,
+        showLoder: true
       })
 
       let reqUrl = `http://localhost:3001/getMusicSearch?song=${this.state.searchQuery}`;
@@ -43,7 +47,8 @@ class Music extends React.Component {
       let sResult = await axios.get(reqUrl);
       this.setState({
         songResult: sResult.data,
-        showSongInfo: true
+        showSongInfo: true,
+        showLoder: false
       })
     }
 
@@ -58,7 +63,7 @@ class Music extends React.Component {
   getSongListFun = async () => {
     try {
 
-      let reqUrl = `http://localhost:3001/getMusicList?songID=40008598`;
+      let reqUrl = `http://localhost:3001/getMusicList?songID=554591360`;
 
       let sResult = await axios.get(reqUrl);
       // console.log("sResult",sResult.data);
@@ -102,17 +107,28 @@ class Music extends React.Component {
   render() {
     return (
       <div style={{ textAlign:"center" }}>
+         <section style={{backgroundSize:"cover" ,backgroundRepeat:"no-repeat",backgroundImage: "url(https://images.unsplash.com/photo-1510915361894-db8b60106cb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60)", height:"700px"}} >
+            <h1 style ={{color:"white",position:"relative", top:"30px",fontFamily:"Times New Roman" }}> you are what you listen to</h1>  
         <Form onSubmit={this.getSongFun}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group style={{paddingTop:"20%",display:"inline-block", position:"relative",right:"150px"}} className="mb-3" controlId="formBasicEmail">
             <Form.Control style={{ width:"300px", marginLeft:"40.5%", marginBottom:"25px", marginTop:"25px"}} type="text" name='song' placeholder="Enter Song Name" />
           </Form.Group>
-          <Button variant="primary" type="submit">
+          <Button style={{position:"relative",left:"1px", top:"9px" ,backgroundColor: "#191970"  }} variant="primary" type="submit">
             Search! 🔍
           </Button>
         </Form>
+        </section>
+       <If condition={this.state.showLoder}>
+         <Then>
+         <Loader/>
+         </Then>
+         <Else>
+
+         
+        < h1 style ={{color:"black",position:"relative", top:"30px",fontFamily:"Times New Roman", marginBottom:"30px",right:"590px" }}>Top 20 songs</h1>
         {this.state.showSongInfo &&
-          <div>
-            <Card style={{ maxWidth: "20rem", maxHeight: "38rem", margin: "2rem"}}>
+          <div style={{marginLeft:"35%" , marginRight:"15%"}}>
+            <Card style={{ maxWidth: "50%", maxHeight: "38rem", margin: "2rem", textAlign:"center"}}>
               <Card.Body>
                 <Card.Text>
                   {this.state.songResult.map(info => {
@@ -129,6 +145,8 @@ class Music extends React.Component {
             </Card>
           </div>
         }
+        </Else>
+       </If>
         {this.state.showTop20 &&
           <div style={{display:"grid", gridTemplateColumns:"1fr 1fr 1fr 1fr"}}>
             {

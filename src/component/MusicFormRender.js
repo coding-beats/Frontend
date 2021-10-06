@@ -11,17 +11,19 @@ class AddMusicForm extends Component {
             <>
 
                 <Form onSubmit={(e) => { this.props.createMusicFun(e, this.props.songResult) }}>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Control type="text" name='note' placeholder="Enter Music note" />
-                    </Form.Group>
-                    
-                    <Button variant="primary" type="submit" onClick={() => {
-                         alert.success('Song Added To List')
+                    <Button style={{ margin: "5px", backgroundColor: "#191970" }} variant="primary" type="submit" onClick={() => {
+                        alert.success('Song Added To List')
                     }}>
                         ADD To Fav List! ❤
                     </Button>
+
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Control type="text" name='note' placeholder="Enter Music note" />
+                    </Form.Group>
+
+
                 </Form>
-                
+
             </>
         )
     }

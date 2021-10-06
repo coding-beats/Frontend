@@ -9,11 +9,10 @@ class SongExplorerRender extends Component {
                 <Card style={{ maxWidth: "20rem", maxHeight: "38rem", margin: "2rem"}}>
                 <Card.Img variant="top" src={this.props.img} style={{ maxWidth: "90%", maxHeight: "15rem", margin: "1rem" }}/>
                     <Card.Body>
-                        <Card.Title>Song info</Card.Title>
-                        <Card.Text>
+                        <Card.Text class="text">
                             <p>Title: {this.props.title}</p>
                             <p>Artist: {this.props.artist}</p>
-                            <Button variant="primary" type="submit" href={this.props.songURL}>
+                            <Button style={{ backgroundColor: "#555555",color: "white", margin:"2px"}} variant="primary" type="submit" href={this.props.songURL}>
                                 Click To Listen ♬
                             </Button>
                         </Card.Text>
