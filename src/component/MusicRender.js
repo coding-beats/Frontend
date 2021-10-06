@@ -15,12 +15,13 @@ class MusicRender extends Component {
 
     render() {
         return (
+
             <div key={this.props.idx}>
-                <Card style={{ maxWidth: "20rem", maxHeight: "38rem", margin: "2rem" }}>
-                <Card.Img variant="top" src={this.props.musicData.img} style={{ maxWidth: "90%", maxHeight: "15rem", margin: "1rem" }}/>
+                <Card style={{ maxWidth: "20rem", maxHeight: "38rem", margin: "2rem"}}>
+                <Card.Img variant="top" src={this.props.musicData.img} style={{ maxWidth: "90%", maxHeight: "15rem", margin: "1rem"}}/>
                     <Card.Body>
                         <Card.Title>Music Info</Card.Title>
-                        <Card.Text>Title: {this.props.musicData.title}</Card.Text>
+                        <Card.Text >Title: {this.props.musicData.title}</Card.Text>
                         <Card.Text>Artisit: {this.props.musicData.artist}</Card.Text>
                         <Card.Text>Note: {this.props.musicData.note}</Card.Text>
                         <Card.Text class="buttons">

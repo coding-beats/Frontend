@@ -21,6 +21,7 @@ class App extends React.Component {
             <Route path='/MusicList' component={MusicList} />
             <Route path='/FavoirteList' component={FavoirteList} />
             <Route path='/AboutUs' component={AboutUs} />
+
           </Switch>
           <Footer />
         </Router>

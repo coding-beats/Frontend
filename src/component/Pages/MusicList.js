@@ -9,6 +9,7 @@ import ListOfMusicRender from '../ListOfMusicRender.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { withAuth0 } from '@auth0/auth0-react';
 
+
 class Music extends React.Component {
 
   constructor(props) {
@@ -25,6 +26,12 @@ class Music extends React.Component {
     }
   }
 
+
+
+
+
+
+  
   componentDidMount = async () => {
 
     this.getSongListFun();
@@ -99,17 +106,27 @@ class Music extends React.Component {
     })
 
   }
+
   render() {
     return (
+      
+    
       <div style={{ textAlign:"center" }}>
-        <Form onSubmit={this.getSongFun}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Control style={{ width:"300px", marginLeft:"40.5%", marginBottom:"25px" }} type="text" name='song' placeholder="Enter Song Name" />
+          
+          
+            <section style={{backgroundSize:"cover" ,backgroundRepeat:"no-repeat",backgroundImage: "url(https://images.unsplash.com/photo-1510915361894-db8b60106cb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60)", height:"700px"}} >
+            <h1 style ={{color:"white",position:"relative", top:"30px",fontFamily:"Times New Roman" }}> you are what you listen to</h1>   
+        <Form  onSubmit={this.getSongFun}>
+          <Form.Group style={{paddingTop:"20%",display:"inline-block", position:"relative",right:"150px"}} className="mb-3" controlId="formBasicEmail">
+            <Form.Control style={{ width:"345px", marginLeft:"40.5%", marginBottom:"25px"}} type="text" name='song' placeholder="Enter Song Name" />
           </Form.Group>
-          <Button variant="primary" type="submit">
+          <Button style={{position:"relative",left:"1px", top:"9px" ,backgroundColor: "#191970"  }}variant="primary" type="submit">
             Search! 🔍
           </Button>
         </Form>
+        
+       </section>
+      < h1 style ={{color:"black",position:"relative", top:"30px",fontFamily:"Times New Roman", marginBottom:"30px",right:"590px" }}>Top 20 songs</h1>
         {this.state.showSongInfo &&
           <div>
             <Card style={{ maxWidth: "20rem", maxHeight: "38rem", margin: "2rem"}}>
