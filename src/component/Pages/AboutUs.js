@@ -24,7 +24,7 @@ class AboutUs extends React.Component {
           {/* <h1 style={{ color: "black", fontFamily: "cursive" }}> Our Team </h1> */}
           < h1 style ={{color:"black",position:"relative", bottom:"280px",fontFamily:"cursive", textAlign:"center", textShadow:"2px 2px black" }}>Special Thanks From Our Coding & Beats Team </h1>
 
-          < h1 style ={{color:"black",position:"relative", marginTop:"-30px",fontFamily:"cursive", textAlign:"center", textShadow:"2px 2px black" }}> Meet Coding & Beats Team </h1>
+          < h1 style ={{color:"black",position:"relative", marginTop:"-30px",fontFamily:"cursive", textAlign:"center", textShadow:"2px 2px black",textDecoration:"underline solid pink 5px" }}> Meet Coding & Beats Team </h1>
           
           <hr />
           <div className="card">
