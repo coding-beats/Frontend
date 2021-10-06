@@ -42,7 +42,7 @@ class Music extends React.Component {
         showLoder: true
       })
 
-      let reqUrl = `http://localhost:3001/getMusicSearch?song=${this.state.searchQuery}`;
+      let reqUrl = `https://music-and-beats.herokuapp.com/getMusicSearch?song=${this.state.searchQuery}`;
 
       let sResult = await axios.get(reqUrl);
       this.setState({
@@ -63,7 +63,7 @@ class Music extends React.Component {
   getSongListFun = async () => {
     try {
 
-      let reqUrl = `http://localhost:3001/getMusicList?songID=554591360`;
+      let reqUrl = `https://music-and-beats.herokuapp.com/getMusicList?songID=554591360`;
 
       let sResult = await axios.get(reqUrl);
       // console.log("sResult",sResult.data);
