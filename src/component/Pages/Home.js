@@ -29,7 +29,7 @@ class Home extends React.Component {
             {this.props.auth0.isAuthenticated ?
               <Button
                 className="btns"
-                href="/MusicList"
+                href="https://music-and-beats.netlify.app/MusicList"
                 buttonStyle="btn--outline"
                 buttonSize="btn--large"
               >
