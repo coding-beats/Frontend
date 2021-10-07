@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-slideshow-image/dist/styles.css";
 import { Slide } from "react-slideshow-image";
 import { withAuth0 } from '@auth0/auth0-react';
+import MusicList from './MusicList';
 
 const slideImages = [
   "images/lilnaz.jpg",
@@ -29,7 +30,7 @@ class Home extends React.Component {
             {this.props.auth0.isAuthenticated ?
               <Button
                 className="btns"
-                href="https://music-and-beats.netlify.app/MusicList"
+                path='/MusicList' component={MusicList}
                 buttonStyle="btn--outline"
                 buttonSize="btn--large"
               >
